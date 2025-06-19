@@ -1,0 +1,119 @@
+/* Estilo jornalístico para seção de notícias com as cores da home */
+
+body {
+    background: #f4f8ff;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #246bfd;
+    font-weight: 600;
+    font-size: 1.08em;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    background: #246bfd;
+    color: #fff;
+}
+
+.noticias {
+    background: #f4f8ff;
+    padding: 60px 0 40px 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    border-top: 4px solid #246bfd;
+    border-bottom: 4px solid #246bfd;
+}
+
+.noticias h2 {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #246bfd;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #246bfd;
+    display: inline-block;
+    padding-bottom: 8px;
+    background: transparent;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticias-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    width: 100%;
+}
+
+.noticia-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+    .noticia-card {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .container {
+        max-width: 98vw;
+    }
+    .noticias-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .noticia-card {
+        width: 95vw;
+        max-width: 370px;
+    }
+}

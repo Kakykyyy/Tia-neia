@@ -1,0 +1,70 @@
+body {
+    background: #f4f8ff;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contato-page {
+    max-width: 500px;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(36,107,253,0.07);
+    padding: 36px 32px 32px 32px;
+    text-align: center;
+}
+
+.contato-page h1 {
+    color: #246bfd;
+    margin-bottom: 18px;
+}
+
+.contato-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0 0;
+    text-align: left;
+}
+
+.contato-list li {
+    margin-bottom: 18px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-list a img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.contato-list a img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.contato-list a {
+    color: #246bfd;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.contato-list a:hover:not(:has(img)) {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contato-page {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    .contato-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}

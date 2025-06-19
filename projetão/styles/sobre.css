@@ -1,0 +1,219 @@
+body {
+    background: #f4f8ff;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header {
+    background: #246bfd;
+    color: #fff;
+    padding: 24px 0 18px 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img.logo {
+    width: 90px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08em;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    background: #fff;
+    color: #246bfd;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 12px 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dev-alert {
+    background: #fff3cd;
+    color: #856404;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.sobre-instituto {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(36,107,253,0.07);
+    padding: 36px 32px 32px 32px;
+    text-align: center;
+    min-width: 320px;
+    max-width: 600px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-instituto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    opacity: 0.85;
+}
+
+.sobre-instituto .container {
+    padding: 0;
+}
+
+.sobre-instituto h2 {
+    color: #246bfd;
+    font-size: 1.6em;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.sobre-instituto p {
+    color: #222;
+    font-size: 1.13em;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.missao-visao-valores {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(36,107,253,0.07);
+    padding: 32px 32px 24px 32px;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.missao-visao-valores h2 {
+    color: #246bfd;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+.missao-visao-valores ul {
+    list-style: disc inside;
+    padding: 0;
+    margin: 12px 0 0 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.missao-visao-valores li {
+    color: #222;
+    font-size: 1.08em;
+    margin-bottom: 4px;
+}
+
+.contato {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(36,107,253,0.07);
+    padding: 32px 32px 24px 32px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.contato-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    opacity: 0.85;
+}
+
+.contato h2 {
+    color: #246bfd;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contato button {
+    background: #246bfd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contato button:hover {
+    background: #0a1d56;
+}
+
+@media (max-width: 900px) {
+    header .container {
+        padding: 0 8px;
+    }
+    main {
+        padding: 18px 2vw 0 2vw;
+    }
+    .sobre-instituto,
+    .missao-visao-valores,
+    .contato {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    .dev-alert {
+        max-width: 98vw;
+    }
+    header nav ul {
+        gap: 12px;
+    }
+}

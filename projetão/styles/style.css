@@ -1,0 +1,789 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fonte padrão */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
+    background: linear-gradient(120deg, #f4f8ff 60%, #e0e7ef 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Reset básico */
+body {
+    background: #f4f8ff;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08em;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #246bfd;
+    color: #fff;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    margin-left: -24px;
+}
+
+.redes-sociais-section {
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.btn-social img {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 40px 0;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 40px 0;
+}
+
+.sobre-text {
+    flex: 1;
+}
+
+.sobre-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-img img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.cards-servicos {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0;
+}
+
+.card-servico {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.07);
+    padding: 24px;
+    width: 260px;
+    text-align: center;
+}
+
+.card-servico img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.depoimentos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0;
+}
+
+.depoimento {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.07);
+    padding: 24px;
+    width: 340px;
+    text-align: center;
+}
+
+.noticias-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0;
+}
+
+.noticia-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.07);
+    padding: 24px;
+    width: 320px;
+    text-align: left;
+}
+
+.noticia-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.instagram-feed .container {
+    text-align: center;
+}
+
+.instagram-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+
+.insta-post {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.07);
+    padding: 16px;
+    width: 220px;
+    text-align: center;
+}
+
+.insta-post img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.insta-caption {
+    margin-top: 8px;
+}
+
+footer .container {
+    text-align: center;
+    padding: 24px 0 12px 0;
+}
+
+/* Centralização global e alinhamento para todas as seções principais */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
+    background: linear-gradient(120deg, #f4f8ff 60%, #e0e7ef 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .container,
+.hero-content,
+.sobre-content,
+.cards-servicos,
+.depoimentos-grid,
+.noticias-grid,
+.redes-sociais,
+.resultados-grid {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero-text,
+.sobre-text,
+.card-servico,
+.depoimento,
+.noticia-card {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-image img,
+.sobre-img img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* HEADER AJUSTADO */
+header {
+    background: linear-gradient(90deg, #0a1d56 80%, #246bfd 100%);
+    color: white;
+    width: 100vw;
+    min-width: 100vw;
+    box-shadow: 0 4px 24px rgba(36,107,253,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+header .logo {
+    width: 110px;
+    height: auto;
+    margin-left: 24px;
+    filter: drop-shadow(0 2px 8px rgba(36,107,253,0.10));
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    margin-right: 24px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 1.08em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background: #fff;
+    color: #246bfd;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.10);
+    outline: none;
+}
+
+/* Centralização global para seções principais */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Corrige centralização dos botões de redes sociais */
+.redes-sociais-section {
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+.btn-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, #246bfd 70%, #0a1d56 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px 10px 16px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(36,107,253,0.07);
+}
+.btn-social img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 8px;
+    filter: drop-shadow(0 1px 2px rgba(36,107,253,0.13));
+    transition: filter 0.2s;
+}
+.btn-social:hover,
+.btn-social:focus {
+    background: #fff;
+    color: #246bfd;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(36,107,253,0.13);
+    outline: none;
+}
+.btn-social:hover img,
+.btn-social:focus img {
+    filter: drop-shadow(0 2px 4px #246bfd);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #246bfd 60%, #0a1d56 100%);
+    color: #fff;
+    padding: 60px 0 40px 0;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.hero-text h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+.hero-text p {
+    font-size: 1.25em;
+    margin-bottom: 28px;
+}
+.btn-cta {
+    background: #fff;
+    color: #246bfd;
+    font-weight: bold;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.10);
+    transition: background 0.2s, color 0.2s;
+}
+.btn-cta:hover {
+    background: #246bfd;
+    color: #fff;
+}
+
+/* Parceiros */
+.parceiros {
+    background: #fff;
+    padding: 32px 0;
+    text-align: center;
+}
+.parceiros-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    margin-top: 18px;
+}
+.parceiros-logos img {
+    height: 48px;
+    filter: grayscale(1) brightness(1.2);
+    transition: filter 0.2s;
+}
+.parceiros-logos img:hover {
+    filter: none;
+}
+
+/* Cards de Serviços */
+.cards-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+.card-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(36,107,253,0.10);
+    padding: 32px 24px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-servico:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(36,107,253,0.15);
+}
+.card-servico img {
+    height: 60px;
+    margin-bottom: 18px;
+}
+.card-servico h3 {
+    color: #246bfd;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.card-servico p {
+    color: #444;
+    font-size: 1em;
+}
+
+/* Processo de Trabalho */
+.steps {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 32px;
+}
+.step {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.08);
+    padding: 24px 18px;
+    text-align: center;
+    width: 200px;
+}
+.step-number {
+    display: inline-block;
+    background: #246bfd;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Resultados */
+.resultados {
+    background: #246bfd;
+    color: #fff;
+    padding: 40px 0;
+}
+.resultados-grid {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+.resultado h3 {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.resultado p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Notícias */
+.noticias {
+    background: #f4f8ff;
+    padding: 48px 0;
+}
+.noticias-grid {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.noticia-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(36,107,253,0.10);
+    padding: 24px 18px;
+    width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.noticia-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.noticia-card h3 {
+    font-size: 1.15em;
+    color: #246bfd;
+}
+.noticia-card .data {
+    color: #888;
+    font-size: 0.98em;
+    margin-bottom: 6px;
+}
+.noticia-card a {
+    color: #246bfd;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+/* Redes Sociais */
+.redes-sociais-section {
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+.btn-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, #246bfd 70%, #0a1d56 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px 10px 16px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(36,107,253,0.07);
+}
+.btn-social img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 8px;
+    filter: drop-shadow(0 1px 2px rgba(36,107,253,0.13));
+    transition: filter 0.2s;
+}
+.btn-social:hover,
+.btn-social:focus {
+    background: #fff;
+    color: #246bfd;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(36,107,253,0.13);
+    outline: none;
+}
+.btn-social:hover img,
+.btn-social:focus img {
+    filter: drop-shadow(0 2px 4px #246bfd);
+}
+
+/* Centraliza listas e remove bullets */
+.sobre-lista {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.sobre-lista li {
+    font-size: 1.08em;
+    color: #222;
+    text-align: center;
+    padding-left: 0;
+}
+
+/* Centraliza títulos e textos das seções */
+.sobre-text h2,
+.projetos h2,
+.depoimentos h2,
+.noticias h2,
+.instagram-feed h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 18px;
+    font-weight: 800;
+}
+
+.sobre-text p,
+.sobre-text ul,
+.sobre-text a {
+    text-align: center;
+    width: 100%;
+}
+
+/* Centraliza cards de projetos */
+.cards-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.card-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ajusta botão "Saiba Mais" */
+.sobre-text .btn-cta {
+    margin: 18px auto 0 auto;
+    display: inline-block;
+}
+
+/* Corrige bullets soltos */
+ul, ol {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    header .logo {
+        margin-left: 0;
+    }
+    header nav ul {
+        margin-right: 0;
+        gap: 18px;
+    }
+    .container {
+        max-width: 98vw;
+    }
+    .redes-sociais {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .noticia {
+        padding: 10px 2vw;
+        border-radius: 10px;
+    }
+    .noticia h1 {
+        font-size: 1.1em;
+    }
+    .btn-social {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero-content, .sobre-content {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+    .hero-text, .sobre-text {
+        text-align: center;
+    }
+    .cards-servicos, .depoimentos-grid, .noticias-grid, .instagram-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 98vw;
+        padding: 0 8px;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-image img, .sobre-img img {
+        max-width: 90vw;
+    }
+    .card-servico, .depoimento, .noticia-card, .insta-post {
+        width: 98vw;
+        max-width: 340px;
+    }
+}
+
