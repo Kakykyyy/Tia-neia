@@ -1,0 +1,94 @@
+body {
+    background: #f4f8ff;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(36,107,253,0.07);
+    padding: 36px 32px 28px 32px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInUp 0.8s cubic-bezier(.77,0,.18,1) both;
+}
+
+.login-container h1 {
+    margin-bottom: 18px;
+    color: #0a1d56;
+    font-size: 1.5em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-form label {
+    text-align: left;
+    color: #246bfd;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.login-form input {
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.login-form input:focus {
+    border: 1.5px solid #246bfd;
+}
+
+.login-form button[type="submit"] {
+    background: #246bfd;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #246bfd22;
+}
+
+.login-form button[type="submit"]:hover {
+    background: #0a1d56;
+}
+
+.cadastro-link {
+    margin-top: 18px;
+    font-size: 1em;
+}
+
+.cadastro-link a {
+    color: #246bfd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.cadastro-link a:hover {
+    color: #0a1d56;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px);}
+    100% { opacity: 1; transform: translateY(0);}
+}

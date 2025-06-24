@@ -4,6 +4,64 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+header {
+    background: linear-gradient(90deg, #0a1d56 80%, #246bfd 100%);
+    color: #fff;
+    width: 100vw;
+    min-width: 100vw;
+    box-shadow: 0 4px 24px rgba(36,107,253,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.header-centralizado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.header-centralizado nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-centralizado .logo {
+    width: 110px;
+    height: auto;
+    margin: 0 32px;
+    display: block;
+    filter: drop-shadow(0 2px 8px rgba(36,107,253,0.10));
+}
+
+.header-centralizado nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08em;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.header-centralizado nav ul li a.active,
+.header-centralizado nav ul li a:hover {
+    background: #246bfd;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.10);
+    outline: none;
+}
+
 .contato-page {
     max-width: 500px;
     margin: 48px auto;
@@ -38,12 +96,13 @@ body {
     width: 28px;
     height: 28px;
     vertical-align: middle;
-    transition: transform 0.2s;
+    transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
 }
 
 .contato-list a img:hover {
-    transform: scale(1.15);
-    filter: brightness(1.2);
+    transform: scale(1.18) rotate(-8deg);
+    filter: brightness(1.2) drop-shadow(0 0 8px #246bfd55);
+    box-shadow: 0 2px 12px #246bfd33;
 }
 
 .contato-list a {
@@ -56,6 +115,43 @@ body {
 .contato-list a:hover:not(:has(img)) {
     text-decoration: underline;
 }
+
+/* Animações para o cabeçalho e seção de contato */
+@keyframes headerFadeIn {
+    0% { opacity: 0; transform: translateY(-40px) scale(0.98);}
+    100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+@keyframes logoPulse {
+    0%, 100% { filter: drop-shadow(0 2px 8px rgba(36,107,253,0.10)); }
+    50% { filter: drop-shadow(0 0 24px #246bfd88); }
+}
+
+@keyframes contatoSlideUp {
+    0% { opacity: 0; transform: translateY(40px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+header {
+    animation: headerFadeIn 1s cubic-bezier(.77,0,.18,1) 0.1s both;
+}
+
+.header-centralizado .logo {
+    animation: logoPulse 2s infinite;
+}
+
+.contato-page {
+    opacity: 0;
+    animation: contatoSlideUp 0.9s cubic-bezier(.77,0,.18,1) 0.3s forwards;
+}
+
+.contato-list li {
+    opacity: 0;
+    animation: contatoSlideUp 0.7s cubic-bezier(.77,0,.18,1) forwards;
+}
+.contato-list li:nth-child(1) { animation-delay: 0.5s; }
+.contato-list li:nth-child(2) { animation-delay: 0.7s; }
+.contato-list li:nth-child(3) { animation-delay: 0.9s; }
 
 @media (max-width: 600px) {
     .contato-page {

@@ -11,19 +11,28 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="container">
-            <img src="images/logo-semfundo.png" alt="Logo do Instituto John Heliton" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="home.html">Início</a></li>
-                    <li><a href="front-end/Notícias.html">Notícias</a></li>
-                    <li><a href="front-end/sobre.html">Sobre</a></li>
-                    <li><a href="front-end/contatos.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- Seção de Redes Sociais -->
+    <div class="header-centralizado">
+        <nav>
+            <ul class="nav-esquerda">
+                <li><a href="home.html" class="active">Início</a></li>
+                <li><a href="front-end/Notícias.html">Notícias</a></li>
+            </ul>
+        </nav>
+        <img src="images/logo-semfundo.png" alt="Logo do Instituto John Heliton" class="logo">
+        <nav>
+            <ul class="nav-direita">
+                <li><a href="front-end/sobre.html">Sobre</a></li>
+                <li><a href="front-end/contatos.html">Contato</a></li>
+                <li>
+                    <a href="front-end/login.html" class="btn-login">Login</a>
+                </li>
+                <li>
+                    <a href="front-end/cadastro.html" class="btn-cadastro">Cadastro</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
     <!-- Seção de Redes Sociais -->
     <section class="redes-sociais-section">
         <div class="container">
@@ -47,7 +56,7 @@
         <div class="hero-text">
             <h1>Transformando Vidas com Educação e Sustentabilidade</h1>
             <p>O Instituto John Heliton promove projetos sociais, culturais e ambientais para o desenvolvimento humano e comunitário.</p>
-            <a href="front-end/contato.html" class="btn-cta">-------</a>
+            <a href="front-end/sobre.html" class="btn-cta">VER MAIS</a>
         </div>
         <div class="hero-image">
             <img src="https://picsum.photos/600/400?random=1" alt="Equipe do Instituto">

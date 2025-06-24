@@ -5,25 +5,47 @@ body {
 }
 
 header {
-    background: #246bfd;
+    background: linear-gradient(90deg, #0a1d56 80%, #246bfd 100%);
     color: #fff;
-    padding: 24px 0 18px 0;
-    text-align: center;
+    width: 100vw;
+    min-width: 100vw;
+    box-shadow: 0 4px 24px rgba(36,107,253,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 10;
     margin-bottom: 0;
+    padding: 0;
 }
 
 header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    all: unset;
 }
 
-header img.logo {
-    width: 90px;
+.header-centralizado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.header-centralizado nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-centralizado .logo {
+    width: 110px;
     height: auto;
-    margin-bottom: 8px;
+    margin: 0 32px;
+    display: block;
+    filter: drop-shadow(0 2px 8px rgba(36,107,253,0.10));
 }
 
 header h1 {
@@ -33,28 +55,22 @@ header h1 {
     font-weight: 800;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li a {
+.header-centralizado nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
     font-size: 1.08em;
-    padding: 8px 18px;
+    padding: 10px 22px;
     border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
-header nav ul li a.active,
-header nav ul li a:hover {
-    background: #fff;
-    color: #246bfd;
+.header-centralizado nav ul li a.active,
+.header-centralizado nav ul li a:hover {
+    background: #246bfd;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(36,107,253,0.10);
+    outline: none;
 }
 
 main {
@@ -191,10 +207,29 @@ main {
     margin-top: 14px;
     cursor: pointer;
     transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contato button::after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff2, #246bfd 80%);
+    transition: left 0.4s cubic-bezier(.77,0,.18,1);
+    z-index: -1;
+}
+
+.contato button:hover::after {
+    left: 0;
 }
 
 .contato button:hover {
-    background: #0a1d56;
+    color: #fff;
 }
 
 @media (max-width: 900px) {
@@ -217,3 +252,38 @@ main {
         gap: 12px;
     }
 }
+
+/* Animações para o cabeçalho e seções principais */
+@keyframes headerFadeIn {
+    0% { opacity: 0; transform: translateY(-40px) scale(0.98);}
+    100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+@keyframes sectionSlideUp {
+    0% { opacity: 0; transform: translateY(40px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes logoPulse {
+    0%, 100% { filter: drop-shadow(0 2px 8px rgba(36,107,253,0.10)); }
+    50% { filter: drop-shadow(0 0 24px #246bfd88); }
+}
+
+header {
+    animation: headerFadeIn 1s cubic-bezier(.77,0,.18,1) 0.1s both;
+}
+
+.header-centralizado .logo {
+    animation: logoPulse 2s infinite;
+}
+
+.sobre-instituto,
+.missao-visao-valores,
+.contato {
+    opacity: 0;
+    animation: sectionSlideUp 0.9s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+.sobre-instituto { animation-delay: 0.2s; }
+.missao-visao-valores { animation-delay: 0.4s; }
+.contato { animation-delay: 0.6s; }

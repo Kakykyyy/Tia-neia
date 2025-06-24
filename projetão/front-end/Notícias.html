@@ -8,12 +8,16 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <img src="../images/logo-semfundo.png" alt="Logo Instituto John Heliton" class="logo">
+        <div class="header-centralizado">
             <nav>
-                <ul>
+                <ul class="nav-esquerda">
                     <li><a href="../home.html">Início</a></li>
                     <li><a href="Notícias.html" class="active">Notícias</a></li>
+                </ul>
+            </nav>
+            <img src="../images/logo-semfundo.png" alt="Logo Instituto John Heliton" class="logo">
+            <nav>
+                <ul class="nav-direita">
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contatos.html">Contato</a></li>
                 </ul>
@@ -21,32 +25,89 @@
         </div>
     </header>
     <main>
-        <section class="noticias">
+        <section class="noticias-destaque">
             <div class="container">
-                <h2>Notícias</h2>
-                <div class="noticias-grid">
-                    <article class="noticia-card">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Evento de Coleta Seletiva">
-                        <h3>Coleta Seletiva: Comunidade Unida pelo Meio Ambiente</h3>
+                <div class="destaque-principal">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Evento de Coleta Seletiva">
+                    <div class="destaque-info">
+                        <span class="tag">Destaque</span>
+                        <h1>Coleta Seletiva: Comunidade Unida pelo Meio Ambiente</h1>
                         <p class="data">15 de Junho de 2025</p>
                         <p>O Instituto John Heliton realizou mais um evento de coleta seletiva, promovendo sustentabilidade e engajamento social.</p>
-                        <a href="#">Leia mais</a>
-                    </article>
-                    <article class="noticia-card">
+                        <a href="#" class="btn-leia-mais">Leia mais</a>
+                    </div>
+                </div>
+                <div class="destaque-secundario-grid">
+                    <div class="destaque-secundario">
                         <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Aula de Reforço">
-                        <h3>Reforço Escolar: Novas Turmas Abertas</h3>
-                        <p class="data">10 de Junho de 2025</p>
-                        <p>Estão abertas as inscrições para o projeto de reforço escolar gratuito para crianças e adolescentes.</p>
-                        <a href="#">Leia mais</a>
+                        <div>
+                            <h2>Reforço Escolar: Novas Turmas Abertas</h2>
+                            <p class="data">10 de Junho de 2025</p>
+                        </div>
+                    </div>
+                    <div class="destaque-secundario">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Evento Cultural">
+                        <div>
+                            <h2>Evento Cultural: Música e Arte na Comunidade</h2>
+                            <p class="data">5 de Junho de 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="noticias-lista">
+            <div class="container">
+                <div class="noticias-grid">
+                    <article class="noticia-card">
+                        <img src="images/recomeco-josue.jpg" alt="Recomeço para Josué">
+                        <div>
+                            <h3>RECOMEÇO PARA JOSUÉ!</h3>
+                            <p class="data">2 de Abril</p>
+                            <p>
+                                Durante sessão realizada em 2 de Abril, a vereadora Neia Marques usou a tribuna da Câmara Municipal para relatar o caso de Josué, morador de rua acolhido com apoio da rede de assistência à saúde. A iniciativa reforça o compromisso do mandato com a inclusão, a dignidade e a justiça social.
+                            </p>
+                        </div>
                     </article>
                     <article class="noticia-card">
-                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Evento Cultural">
-                        <h3>Evento Cultural: Música e Arte na Comunidade</h3>
-                        <p class="data">5 de Junho de 2025</p>
-                        <p>Uma noite de apresentações culturais reuniu famílias e artistas locais em uma grande celebração da cultura.</p>
-                        <a href="#">Leia mais</a>
+                        <img src="images/meu-craque-john.jpg" alt="Meu Craque John">
+                        <div>
+                            <h3>MEU CRAQUE JOHN</h3>
+                            <p class="data">12 de Abril</p>
+                            <p>
+                                [Belém] No dia 12 de abril, a vereadora Neia Marques celebrou a inauguração do projeto "Meu Craque John", com homenagem especial aos jovens com trajetória de superação e dedicação ao futebol. O evento contou com atividades esportivas e distribuição de brindes para a comunidade.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="noticia-card">
+                        <img src="images/doe-uma-chuteira.jpg" alt="Doe uma Chuteira">
+                        <div>
+                            <h3>DOE UMA CHUTEIRA</h3>
+                            <p class="data">Abril</p>
+                            <p>
+                                Durante o evento, realizado com grande participação da comunidade, Neia também lançou a campanha solidária "Doe uma Chuteira", que busca arrecadar calçados esportivos para crianças e adolescentes em situação de vulnerabilidade. Doe e ajude a fazer parte da materialização de sonhos!
+                            </p>
+                        </div>
+                    </article>
+                    <article class="noticia-card">
+                        <img src="images/visita-brasilia.jpg" alt="Visita a Brasília">
+                        <div>
+                            <h3>VISITA A BRASÍLIA</h3>
+                            <p class="data">Abril</p>
+                            <p>
+                                [Brasília] A vereadora Neia Marques esteve na capital federal por convite dos deputados Beto Faro e Dilvanda Faro, tratando de pautas importantes para o desenvolvimento da comunidade.
+                            </p>
+                        </div>
                     </article>
                 </div>
+                <aside class="noticias-lateral">
+                    <h4>Mais Lidas</h4>
+                    <ul>
+                        <li><a href="#">Coleta Seletiva: Comunidade Unida pelo Meio Ambiente</a></li>
+                        <li><a href="#">Evento Cultural: Música e Arte na Comunidade</a></li>
+                        <li><a href="#">Mutirão de Limpeza no Bairro</a></li>
+                        <li><a href="#">Campanha do Agasalho: Doe Calor</a></li>
+                    </ul>
+                </aside>
             </div>
         </section>
     </main>
