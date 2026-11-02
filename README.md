@@ -1,50 +1,66 @@
-# Tia-neia — Site institucional
+<div align="center">
 
-Protótipo de site institucional com páginas informativas do Instituto John Heliton, desenvolvido em HTML e CSS. Há páginas de início, notícias, sobre, contatos, cadastro e login.
+# Tia-neia
 
-## Execução local
+**Presença digital para um projeto institucional**
 
-Não há dependências npm nem backend no repositório. Para servir os arquivos por HTTP, use um servidor estático, por exemplo:
+![HTML](https://img.shields.io/badge/HTML-20232a?style=flat-square) ![CSS](https://img.shields.io/badge/CSS-20232a?style=flat-square)
+
+[Sobre](#sobre) · [Como executar](#como-executar) · [Documentação](DOCUMENTACAO.md)
+
+</div>
+
+---
+
+## Sobre
+
+Protótipo de site institucional do Instituto John Heliton. O projeto organiza informações, notícias e contatos em páginas próprias, com uma identidade visual compartilhada.
+
+## Destaques
+
+- Página inicial de apresentação.
+- Páginas de notícias, sobre e contatos.
+- Interfaces visuais de cadastro e login.
+- Estilos organizados por página.
+
+## Como executar
+
+Clone o repositório:
 
 ```sh
 git clone https://github.com/Kakykyyy/Tia-neia.git
 cd Tia-neia
+```
+
+Também é possível abrir `projetão/home.html` diretamente. Cadastro e login são interfaces de demonstração; não possuem autenticação ou persistência de usuários.
+
+```sh
 python -m http.server 8000
 ```
 
-Abra http://localhost:8000/projet%C3%A3o/home.html. Python é apenas uma opção de servidor local. É possível abrir `projetão/home.html` diretamente no navegador.
+Acesse [a aplicação local](http://localhost:8000/projet%C3%A3o/home.html).
 
-## Estrutura e navegação
+## Organização
 
-| Caminho | Conteúdo |
-|---|---|
-| `projetão/home.html` | Página inicial |
-| `projetão/front-end/sobre.html` | Apresentação institucional |
-| `projetão/front-end/Notícias.html` | Notícias |
-| `projetão/front-end/contatos.html` | Contatos |
-| `projetão/front-end/cadastro.html` | Formulário visual de cadastro |
-| `projetão/front-end/login.html` | Formulário visual de login |
-| `projetão/styles/` | Folhas de estilo |
+```text
+projetão/
+├── home.html   # Entrada do site
+├── front-end/  # Notícias, sobre, contatos e formulários
+└── styles/     # Folhas de estilo
+```
 
-Preserve maiúsculas e acentos, especialmente `Notícias.html` e `projetão`, pois hospedagens podem diferenciar esses nomes.
+## Personalização
 
-## Funcionalidades e limites
+Edite o conteúdo nas páginas HTML e a aparência em `projetão/styles/`. Preserve os caminhos relativos, os acentos e as maiúsculas nos nomes dos arquivos, especialmente `Notícias.html`.
 
-As páginas apresentam conteúdo e navegação institucional. Os formulários de cadastro e login analisados não possuem integração de servidor, armazenamento de usuários ou autenticação. Os campos obrigatórios e de email oferecem somente a validação do navegador. Não use dados reais de acesso nesse protótipo.
+## Publicação
 
-## Personalização e publicação
+O projeto pode ser servido como site estático. Configure a entrada para `projetão/home.html` ou use o endereço completo dessa página.
 
-Atualize textos e links nos arquivos HTML e estilos na pasta `styles/`. Mantenha os caminhos relativos, como `../styles/`, ao mover páginas.
+## Documentação técnica
 
-A hospedagem deve servir arquivos estáticos. Como a entrada está em `projetão/home.html`, configure essa página como início ou disponibilize o endereço completo. O repositório não contém uma entrada `index.html` na raiz analisada.
+O [guia técnico](DOCUMENTACAO.md) reúne configuração, comportamento dos dados, limitações conhecidas e verificações manuais. As instruções foram elaboradas a partir da leitura do código; a execução dos projetos não foi validada nesta revisão.
 
-## Verificação manual
+## Autor
 
-Parta da home e confira cada link, imagens, estilos e adaptação a telas pequenas. Visite as páginas de cadastro e login para conferir apenas a interface. Não há suíte de testes automatizados nem confirmação de funcionamento de serviços externos.
-
-## Licença
-
-Não há arquivo LICENSE na árvore analisada. Confirme os direitos de textos e imagens antes de reutilizá-los.
-
----
-Documentação baseada na leitura da branch principal em 2 de novembro de 2026. Os procedimentos não foram executados nesta revisão documental.
+Desenvolvido por [Kayky Erick · @Kakykyyy](https://github.com/Kakykyyy).
